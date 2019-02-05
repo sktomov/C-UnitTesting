@@ -1,8 +1,7 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TestNinja.Fundamentals;
 
-namespace UnitTestProject1
+namespace UnitTestProject1.Fundamentals
 {
     [TestFixture]
     public class MathTests

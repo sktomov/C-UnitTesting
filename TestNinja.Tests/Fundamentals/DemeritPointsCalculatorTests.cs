@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
+using NUnit.Framework;
 using TestNinja.Fundamentals;
 
-namespace UnitTestProject1
+namespace UnitTestProject1.Fundamentals
 {
     [TestFixture]
     public class DemeritPointsCalculatorTests

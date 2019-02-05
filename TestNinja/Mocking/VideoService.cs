@@ -36,7 +36,6 @@ namespace TestNinja.Mocking
             }
 
             return String.Join(",", videoIds);
-            
         }
     }
 

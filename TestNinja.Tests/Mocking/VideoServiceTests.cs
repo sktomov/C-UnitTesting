@@ -26,5 +26,35 @@ namespace UnitTestProject1.Mocking
 
             Assert.That(result, Is.EqualTo(""));
         }
+
+        [Test]
+        public void GetUnprocessedVideosAsCsv_AFewUnProcessedVideos_ReturnsStringWithIds()
+        {
+            _videoRepository.Setup(r => r.GetUnProcessedVideos()).Returns(new List<Video>
+            {
+                new Video
+                {
+                    Id = 1,
+                    IsProcessed = false,
+                    Title = "a"
+                },
+                new Video
+                {
+                    Id = 2,
+                    IsProcessed = false,
+                    Title = "b"
+                },
+                new Video
+                {
+                    Id = 3,
+                    IsProcessed = false,
+                    Title = "c"
+                },
+            });
+
+            var result = _videoService.GetUnprocessedVideosAsCsv();
+
+            Assert.That(result, Is.EqualTo("1,2,3"));
+        }
     }
 }
